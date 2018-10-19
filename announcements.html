@@ -7,7 +7,7 @@
     <meta name="description" content="FRC Team 5827 Code Purple's Website">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Anirudh Suresh">
-    <title>Home | Code Purple</title>
+    <title>Announcements | Code Purple</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <section class="hero is-info is-large">
+    <section class="hero is-info is-fullheight" id="top" style="background-color: #23344f">
         <div class="hero-head">
             <nav class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                        <a class="navbar-item" href="index">
+                            <h1 class="title">Code Purple</h1>
                         </a>
                         <span class="navbar-burger burger" data-target="navbarMenuHeroB">
                             <span></span>
@@ -31,23 +31,12 @@
                     </div>
                     <div id="navbarMenuHeroB" class="navbar-menu">
                         <div class="navbar-end">
-                            <a class="navbar-item is-active">
+                            <a class="navbar-item" href="index">
                                 Home
                             </a>
-                            <a class="navbar-item">
-                                Examples
+                            <a class="navbar-item is-active">
+                                Announcements/Info
                             </a>
-                            <a class="navbar-item">
-                                Documentation
-                            </a>
-                            <span class="navbar-item">
-                                <a class="button is-info is-inverted">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>Download</span>
-                                </a>
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -55,13 +44,16 @@
         </div>
 
         <div class="hero-body">
-            <div class="container has-text-centered">
+            <div class="container">
                 <p class="title">
-                    Title
+                    Announcements
                 </p>
-                <p class="subtitle">
-                    Subtitle
-                </p>
+                <br>
+                <br>
+                <ul>
+                    <li><span class="icon"><i class="fa fa-chevron-right"></i></span>Meetings every Thursday in room 332</li>
+                    <li><span class="icon"><i class="fa fa-chevron-right"></i></span>You need to pass your <strong>safety test!</strong></li>
+                </ul>
             </div>
         </div>
 
@@ -69,25 +61,15 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li class="is-active">
-                            <a>Overview</a>
+                        <li>
+                            <a href="#top">Main</a>
                         </li>
                         <li>
-                            <a>Modifiers</a>
+                            <a href="#dates">Dates</a>
                         </li>
                         <li>
-                            <a>Grid</a>
+                            <a href="#dates">Other Information</a>
                         </li>
-                        <li>
-                            <a>Elements</a>
-                        </li>
-                        <li>
-                            <a>Components</a>
-                        </li>
-                        <li>
-                            <a>Layout</a>
-                        </li>
-                    </ul>
                 </div>
             </nav>
         </div>
