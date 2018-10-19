@@ -6,14 +6,18 @@ html {
 .nav-btn {
     padding-bottom: 15px;
 }
-.descriptionsection {
-    background: url('https://lwrobotics.files.wordpress.com/2014/03/img_9896.jpg?w=900&h=366') no-repeat center center fixed;
-    background-size: cover;
-}
 #foot {
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
     opacity: 0.4;
 }
 #foot:hover {
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
     opacity: 1;
 }
 /*HVR*/
@@ -33,4 +37,32 @@ html {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+
+/*Scroll Bar*/
+::selection {
+    background: purple; /* WebKit/Blink Browsers */
+    color: white;
+  }
+::-moz-selection {
+    background: purple; /* Gecko Browsers */
+    color: white;
+}
+
+::-webkit-scrollbar {
+    background: lightgrey;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+::-webkit-scrollbar-track-piece {
+    background: lightgrey;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 6px;
 }

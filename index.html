@@ -19,60 +19,97 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
+
+
 <body>
-    <section class="hero is-primary is-fullheight has-text-centered" style="background-color: #643a78;">
-        <div class="hero-body">
+    <section class="hero is-info is-fullheight" style="background-color: #643a78;">
+        <div class="notification is-warning" id="announcements">
+            <button class="delete" onclick="closeAnnouncements()"></button>
+            <h2 data-aos="fade-up">
+                <strong>Announcements</strong>
+            </h2>
+            <p data-aos="fade-up">Meetings in Room 332 every Thursday!</p>
+            <a class="button is-rounded is-dark hvr-grow" href="announcements" data-aos="fade-up">
+                <span class="icon">
+                    <i class="fa fa-link"></i>
+                </span>
+                <span>
+                    Other Info
+                </span>
+            </a>
+            <br>
+            <br>
+            <h2 data-aos="fade-up">
+                <strong>Important</strong>
+            </h2>
+            <p data-aos="fade-up">Important new information available! Click the button below to access</p>
+            <a class="button is-rounded is-dark hvr-grow" href="announcements" data-aos="fade-up">
+                <span class="icon">
+                    <i class="fa fa-link"></i>
+                </span>
+                <span>
+                    Important Info
+                </span>
+            </a>
+        </div>
+        <div class="hero-body has-text-centered">
             <div class="container">
-                <h1 class="title" style="font-size: 72px;">
+                <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
                     <span style='color:#FF6A4D;'>C</span><span style='color:#EC7456;'>o</span><span style='color:#D97E5F;'>d</span><span style='color:#C68868;'>e</span> <span style='color:#A09D7B;'>P</span><span style='color:#8EA784;'>u</span><span style='color:#7BB18D;'>r</span><span style='color:#68BC97;'>p</span><span style='color:#55C6A0;'>l</span><span style='color:#42D0A9;'>e</span>
                 </h1>
-                <h2 class="subtitle" data-aos="fade-up">
+                <br>
+                <p data-aos="fade-up">
                     Team 5827
-                </h2>
-                <h2 class="subtitle" data-aos="fade-up">
+                </p>
+                <p data-aos="fade-up">
                     LWHS FRC Club
-                </h2>
+                </p>
             </div>
         </div>
 
-        <div class="hero-foot nav-btn">
-            <a class="button is-dark is-rounded" href="#info">
+        <div class="hero-foot nav-btn has-text-centered">
+            <a class="button is-info is-rounded hvr-grow" href="#info">
+                <span class="icon">
+                    <i class="fa fa-globe"></i>
+                </span>
+            </a>
+            <a class="button is-dark is-rounded hvr-grow" href="#info">
                 <span class="icon">
                     <i class="fa fa-chevron-down"></i>
+                </span>
+            </a>
+            <a class="button is-info is-rounded hvr-grow" href="info">
+                <span class="icon">
+                    <i class="fa fa-info"></i>
                 </span>
             </a>
         </div>
     </section>
 
-    <section class="hero is-info" id="announcements">
-        <div class="hero-body">
-            <div class="container">
-                <h2 data-aos="fade-up">
-                    <strong>Announcements</strong>
-                </h2>
-                <p data-aos="fade-up">Meetings in Room 332 every Thursday!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="hero is-primary decriptionsection" id="info" style="background: url('https://darklink77689.github.io/images/banner.png') no-repeat center center fixed;background-size: cover;">
-        <div class="hero-body" style="background-color: rgba(0,0,0,0.8)">
+    <section class="hero is-primary is-fullheight decriptionsection" id="info" style="background-image: url('img/banner.png');background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+        <div class="hero-body" style="background-color: rgba(0,0,0,0.75);">
             <div class="container">
                 <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
                     Kang
                     <strong>Pride</strong>
                 </h1>
 
-                <p data-aos="fade-up"> We are Code Purple (Team 5827), a FRC robotics club from Lake Washington High School and local magnet academies,
-                    based in Kirkland, Washington. The club was started in 2011 as a VRC team. For three years, exceptional
-                    STEM students have gotten our robots to the Worlds competition and won numerous awards. For the 2016
-                    season, the team decided to switch from the Vex to a FRC for a greater challenge and more opportunities
-                    to enhance STEM principles. Throughout the school year, club members build a robot to compete in the
-                    current year’s FRC challenge. Every January, we build a new robot to go compete in that year's game.</p>
+                <p data-aos="fade-up"> We are Code Purple (Team 5827), a FRC robotics club from Lake Washington High
+                    School and local magnet academies,
+                    based in Kirkland, Washington. The club was started in 2011 as a VRC team. For three years,
+                    exceptional
+                    STEM students have gotten our robots to the Worlds competition and won numerous awards. For the
+                    2016
+                    season, the team decided to switch from the Vex to a FRC for a greater challenge and more
+                    opportunities
+                    to enhance STEM principles. Throughout the school year, club members build a robot to compete in
+                    the
+                    current year’s FRC challenge. Every January, we build a new robot to go compete in that year's
+                    game.</p>
 
                 <br>
                 <p data-aos="fade-up">
-                    <a class="button is-info is-rounded" href="https://www.firstinspires.org/robotics/frc">
+                    <a class="button is-info is-rounded hvr-grow" href="https://www.firstinspires.org/robotics/frc">
                         <span class="icon">
                             <i class="fa fa-link"></i>
                         </span>
@@ -123,67 +160,63 @@
                         </div>
                     </div>
                     <div class="column">
-                        <div class="column">
-                            <div class="card hvr-grow">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
+                        <div class="card hvr-grow">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Title</p>
+                                        <p class="subtitle is-6">Chloe</p>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <figure class="image is-48x48">
-                                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                                            </figure>
-                                        </div>
-                                        <div class="media-content">
-                                            <p class="title is-4">Title</p>
-                                            <p class="subtitle is-6">Chloe</p>
-                                        </div>
-                                    </div>
 
-                                    <div class="content">
-                                        Interesting stuff.
-                                        <a href="twitter.com">@lwhsrobotics</a>.
-                                        <a href="#">#robotics</a>
-                                        <a href="#">#frc</a>
-                                        <br>
-                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2020</time>
-                                    </div>
+                                <div class="content">
+                                    Interesting stuff.
+                                    <a href="twitter.com">@lwhsrobotics</a>.
+                                    <a href="#">#robotics</a>
+                                    <a href="#">#frc</a>
+                                    <br>
+                                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2020</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="column">
-                        <div class="column">
-                            <div class="card hvr-grow">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
+                        <div class="card hvr-grow">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Title</p>
+                                        <p class="subtitle is-6">Chloe</p>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <figure class="image is-48x48">
-                                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                                            </figure>
-                                        </div>
-                                        <div class="media-content">
-                                            <p class="title is-4">Title</p>
-                                            <p class="subtitle is-6">Chloe</p>
-                                        </div>
-                                    </div>
 
-                                    <div class="content">
-                                        Interesting stuff.
-                                        <a href="twitter.com">@lwhsrobotics</a>.
-                                        <a href="#">#robotics</a>
-                                        <a href="#">#frc</a>
-                                        <br>
-                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2020</time>
-                                    </div>
+                                <div class="content">
+                                    Interesting stuff.
+                                    <a href="twitter.com">@lwhsrobotics</a>.
+                                    <a href="#">#robotics</a>
+                                    <a href="#">#frc</a>
+                                    <br>
+                                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2020</time>
                                 </div>
                             </div>
                         </div>
@@ -217,38 +250,38 @@
     <section class="hero is-dark decriptionsection has-text-centered" id="footerbox">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title" data-aos="fade-up">
+                <h1 class="title">
                     Thank you sponsors!
                 </h1>
                 <br>
-                <div class="columns" data-aos="fade-up">
+                <div class="columns">
                     <div class="column">
-                        <span class="icon logo">
+                        <span class="icon logo hvr-grow">
                             <i class="fab fa-microsoft fa-3x"></i>
                         </span>
                     </div>
                     <div class="column">
-                        <span class="icon logo">
+                        <span class="icon logo hvr-grow">
                             <i class="fab fa-google fa-3x"></i>
                         </span>
                     </div>
                     <div class="column">
-                        <span class="icon logo">
+                        <span class="icon logo hvr-grow">
                             <i class="fab fa-discord fa-3x"></i>
                         </span>
                     </div>
                     <div class="column">
-                        <span class="icon logo">
+                        <span class="icon logo hvr-grow">
                             <i class="fa fa-school fa-3x"></i>
                         </span>
                     </div>
                     <div class="column">
-                        <span class="icon logo">
+                        <span class="icon logo hvr-grow">
                             <i class="fa fa-rocket fa-3x"></i>
                         </span>
                     </div>
                     <div class="column">
-                        <span class="icon logo">
+                        <span class="icon logo hvr-grow">
                             <i class="fab fa-windows fa-3x"></i>
                         </span>
                     </div>
@@ -264,22 +297,22 @@
                     <strong>Code Purple</strong>
                 </p>
                 <p>
-                    <a class="button is-dark is-outlined is-inverted is-rounded" href="https://www.instagram.com/lwhsrobotics/">
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://www.instagram.com/lwhsrobotics/">
                         <span class="icon">
                             <i class="fab fa-instagram"></i>
                         </span>
                     </a>
-                    <a class="button is-dark is-outlined is-inverted is-rounded" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
                         <span class="icon">
                             <i class="fab fa-facebook"></i>
                         </span>
                     </a>
-                    <a class="button is-dark is-outlined is-inverted is-rounded" href="https://twitter.com/LW_Robotics">
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://twitter.com/LW_Robotics">
                         <span class="icon">
                             <i class="fab fa-twitter"></i>
                         </span>
                     </a>
-                    <a class="button is-dark is-outlined is-inverted is-rounded" href="mailto:esirjani@lwsd.org">
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="mailto:esirjani@lwsd.org">
                         <span class="icon">
                             <i class="fa fa-envelope"></i>
                         </span>
@@ -288,7 +321,8 @@
                 <br>
                 <br>
                 <p>
-                    <a href="https://github.com/DarkLink77689" style="font-size: 8px;" class="button is-dark is-outlined is-inverted is-rounded">Anirudh Suresh</a>
+                    <a href="https://github.com/DarkLink77689" style="font-size: 8px;" class="hvr-grow button is-dark is-outlined is-inverted is-rounded">Anirudh
+                        Suresh</a>
                 </p>
             </div>
         </div>
@@ -300,6 +334,9 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
