@@ -17,8 +17,51 @@
 
 
 <body>
+
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index">
+                <img src="img/logo.png" width="">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index">
+                    Home
+                </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item" href="blog">
+                    <span class="icon">
+                        <i class="fa fa-newspaper"></i>
+                    </span>
+                    <span>
+                        Blog
+                    </span>
+                </a>
+                <a class="navbar-item" href="announcements">
+                    <span class="icon">
+                        <i class="fa fa-info"></i>
+                    </span>
+                    <span>
+                        Announcements
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <section class="hero is-info is-fullheight" style="background-color: #643a78;">
-        <div class="notification is-info" id="announcements">
+        <div class="notification is-info" id="announcements" style="padding-top: 80px;">
             <button class="delete" onclick="closeAnnouncements()"></button>
             <h2 data-aos="fade-up">
                 <strong>Announcements</strong>
@@ -34,11 +77,20 @@
                     Other Info
                 </span>
             </a>
+            <a class="button is-rounded is-danger is-outlined is-inverted hvr-grow" onclick="closeAnnouncements()"
+                data-aos="fade-up">
+                <span class="icon">
+                    <i class="fa fa-times"></i>
+                </span>
+                <span>
+                    Close
+                </span>
+            </a>
         </div>
         <div class="hero-body has-text-centered">
             <div class="container">
                 <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
-                    <span style='color:#FF6A4D;'>C</span><span style='color:#EC7456;'>o</span><span style='color:#D97E5F;'>d</span><span style='color:#C68868;'>e</span> <span style='color:#A09D7B;'>P</span><span style='color:#8EA784;'>u</span><span style='color:#7BB18D;'>r</span><span style='color:#68BC97;'>p</span><span style='color:#55C6A0;'>l</span><span style='color:#42D0A9;'>e</span>
+                    <!--<span style='color:#FF6A4D;'>C</span><span style='color:#EC7456;'>o</span><span style='color:#D97E5F;'>d</span><span style='color:#C68868;'>e</span> <span style='color:#A09D7B;'>P</span><span style='color:#8EA784;'>u</span><span style='color:#7BB18D;'>r</span><span style='color:#68BC97;'>p</span><span style='color:#55C6A0;'>l</span><span style='color:#42D0A9;'>e</span>-->
                 </h1>
                 <br>
                 <p data-aos="fade-up">
@@ -51,19 +103,9 @@
         </div>
 
         <div class="hero-foot nav-btn has-text-centered">
-            <a class="button is-info is-rounded hvr-grow" href="blog">
-                <span class="icon">
-                    <i class="fa fa-newspaper"></i>
-                </span>
-            </a>
             <a class="button is-dark is-rounded hvr-grow" href="#info">
                 <span class="icon">
                     <i class="fa fa-chevron-down"></i>
-                </span>
-            </a>
-            <a class="button is-info is-rounded hvr-grow" href="announcements">
-                <span class="icon">
-                    <i class="fa fa-info"></i>
                 </span>
             </a>
         </div>
@@ -77,13 +119,13 @@
                     <strong>Pride</strong>
                 </h1>
 
-                <p data-aos="fade-up"> We are Code Purple (Team 5827), a FRC robotics club from Lake Washington High
+                <p data-aos="fade-up"> We are Code Purple (Team 5827), an FRC robotics club from Lake Washington High
                     School and local magnet academies,
                     based in Kirkland, Washington. The club was started in 2011 as a VRC team. For three years,
                     exceptional
                     STEM students have gotten our robots to the Worlds competition and won numerous awards. For the
                     2016
-                    season, the team decided to switch from the Vex to a FRC for a greater challenge and more
+                    season, the team decided to switch from the Vex to FRC for a greater challenge and more
                     opportunities
                     to enhance STEM principles. Throughout the school year, club members build a robot to compete in
                     the

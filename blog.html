@@ -15,36 +15,52 @@
 </head>
 
 <body>
-    <section class="hero is-dark is-large" id="bloghead">
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="index">
-                            <h1 class="title">Code Purple</h1>
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenuHeroB" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a class="navbar-item" href="index">
-                                Home
-                            </a>
-                            <a class="navbar-item is-active">
-                                Blog
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index">
+                <img src="img/logo.png" width="">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index">
+                    Home
+                </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item" href="blog">
+                    <span class="icon">
+                        <i class="fa fa-newspaper"></i>
+                    </span>
+                    <span>
+                        Blog
+                    </span>
+                </a>
+                <a class="navbar-item" href="announcements">
+                    <span class="icon">
+                        <i class="fa fa-info"></i>
+                    </span>
+                    <span>
+                        Announcements
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-info is-large" id="bloghead">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title" data-aos="fade-up">Code Purple Blog</h1>
+                <br>
                 <h1 class="subtitle" data-aos="fade-up">You can find all our blogs from 2018 and newer here</h1>
             </div>
         </div>
@@ -72,7 +88,11 @@
                         </div>
 
                         <div class="content" data-aos="fade-up">
-                            The new website for Code Purple has started. At this point in time, the website is still in the beta stages. Much is under development, and everything is subject to change. The new website is aimed to provide information to members and nonmembers alike in the simplest manner available. And of course, the purpose of this blog post is only to test the blog capabilities. ;)
+                            The new website for Code Purple has started. At this point in time, the website is still in
+                            the beta stages. Much is under development, and everything is subject to change. The new
+                            website is aimed to provide information to members and nonmembers alike in the simplest
+                            manner available. And of course, the purpose of this blog post is only to test the blog
+                            capabilities. ;)
                             <br>
                             <br>
                             <time datetime="2016-1-1" data-aos="fade-up">9:00 PM - 17 Oct 2018</time>
