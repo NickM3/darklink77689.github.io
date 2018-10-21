@@ -20,6 +20,8 @@ Code Purple [website][website] was written in HTML, CSS, and JS in [VS Code](htt
 * [JQuery](https://jquery.com/)
 * [AOS](https://michalsnik.github.io/aos/)
 * [Hover.css](http://ianlunn.github.io/Hover/)
+* [CountUp.js](http://inorganik.github.io/countUp.js/)
+* [Visible.js](https://github.com/customd/jquery-visible)
 
 ## Author
 
@@ -65,8 +67,10 @@ The libraries are:
 * [JQuery](https://jquery.com/) - JS
 * [AOS](https://michalsnik.github.io/aos/) - HTML/JS
 * [Hover.css](http://ianlunn.github.io/Hover/) - HTML/CSS
+* [CountUp.js](http://inorganik.github.io/countUp.js/) - JS
+* [Visible.js](https://github.com/customd/jquery-visible) - JS
 
-Learn them at your own pace. Refrain from editing undocumented portions of the website.
+Learn them at your own pace. Refrain from editing undocumented portions of the website before you understand all of these libraries **thoroughly**.
 
 ### Setting up the Coding Environment
 
