@@ -3,6 +3,8 @@
 
 This is **Code Purple's** website, currently hosted [here][website]. This website is hosted by **Github Pages**, so all blog posts and edits done to the website are done here, and the changes reflect on the website. Continue reading below for documentation on how to edit the website.
 
+**NOTE:** The information on this `README.md` file is not very thorough. For a more in-depth view, refer to the wiki on the Github page.
+
 # Table of Contents
 
 * About
