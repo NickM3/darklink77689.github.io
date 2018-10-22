@@ -79,4 +79,4 @@ The tools & other things associated with coding the website
 #### Main Tools
 The only tools needed to code the website are **VS Code**, **Git**, and a **browser**. Anything else is purely just for unimportant reasons, like aesthetics.
 
-[website]: darklink77689.github.io
+[website]: http://darklink77689.github.io
