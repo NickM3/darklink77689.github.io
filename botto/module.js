@@ -1,3 +1,5 @@
+const prefix = "$";
+const fs = require('fs');
 module.exports = {
     rank: function (message, data) {
         var rank = data;
@@ -18,17 +20,32 @@ module.exports = {
         message.channel.send("2) " + rank[1].name);
         message.channel.send("3) " + rank[2].name);
     },
-    rank: function (message) {
-        const args = message.content.slice(prefix.length).trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
-        var x = message.mentions.users.first().id;
-
-        for (var i = 0; i < data.length; i++) {
-            if (data[i].id == x) {
-                data[i].name = args[1];
+    reset: function (message, data) {
+        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Grammar Enforcer") || message.author.id == '401965023527829505') {
+            const args = message.content.slice(prefix.length).trim().split(/ +/g);
+            const command = args.shift().toLowerCase();
+            //message.channel.send(message.author + " gave " + args[0] + " a :star:!");
+            //message.guild.members.get( message.mentions.users.first().id ).setNickname("⭐");
+            var x = message.mentions.users.first().id;
+            var found = false;
+            var add = false;
+            var index = -1;
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id == x) {
+                    found = true;
+                    data[i].stars = 0;
+                    index = i;
+                }
             }
+            if (found) {
+                message.guild.members.get(x).setNickname(data[index].name);
+                message.channel.send("Reset Successful!");
+            } else {
+                message.channel.send("Oof! They either had no stars, or they don't exist to me...");
+            }
+            fs.writeFileSync("./data.json", JSON.stringify(data));
         }
-        message.channel.send("If that person exists, their name will be set to " + args[1] + " on the next reset!");
+        return data;
     },
     star: function (message, data) {
         if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Grammar Enforcer") || message.author.id == '401965023527829505') {
@@ -83,7 +100,92 @@ module.exports = {
             }
             console.log(data);
             fs.writeFileSync("./data.json", JSON.stringify(data));
+        } else {
+            message.channel.send("Whoops! You don't seem to have permission to do that...");
         }
         return data;
+    },
+    _star: function (message, data) {
+        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Grammar Enforcer") || message.author.id == '401965023527829505') {
+            const args = message.content.slice(prefix.length).trim().split(/ +/g);
+            const command = args.shift().toLowerCase();
+            //message.guild.members.get( message.mentions.users.first().id ).setNickname("⭐");
+            var x = message.mentions.users.first().id;
+            var found = false;
+            var remove = false;
+            var tstars = 0;
+            for (var i = 0; i < data.length - 1; i++) {
+                if (data[i].id == x) {
+                    found = true;
+                    if (data[i].stars == 0) {
+                        message.channel.send("Uh oh! They don't have stars I can take!")
+                    }
+                    if (data[i].stars > 0) {
+                        remove = true;
+                        data[i].stars--;
+                        tstars = data[i].stars;
+                    }
+                }
+            }
+            if (!found) {
+                var tmp = {
+                    "id": x,
+                    "name": message.guild.members.get(x).displayName,
+                    "stars": 0
+                }
+                data.push(tmp);
+                message.channel.send("Oi. They don't got stars...");
+            } else {
+                if (remove) {
+                    var index = -1;
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].id == x) {
+                            index = i;
+                        }
+                    }
+                    message.guild.members.get(x).setNickname(data[index].name);
+                    for (var i = 0; i <= tstars; i++) {
+                        message.guild.members.get(x).setNickname(data[index].name + "⭐");
+                    }
+                }
+                message.channel.send(message.author + " took " + args[0] + "'s star!");
+
+            }
+        } else {
+            message.channel.send("Whoops! You don't seem to have permission to do that...");
+        }
+        return data;
+    },
+    rename: function (message, data) {
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+        //message.guild.members.get( message.mentions.users.first().id ).setNickname("⭐");
+        var x = message.mentions.users.first().id;
+        var found = false;
+        for (var i = 0; i < data.length - 1; i++) {
+            if (data[i].id == x) {
+                data[i].name == args[1];
+            }
+        }
+        message.channel.send("If that person exists, then their name will be set to " + args[1] + " on the next reset!");
+        return data;
+    },
+    oof: function (message) {
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+        var x = message.mentions.users.first().id;
+        message.channel.send("<@" + x + "> has been oofed!");
+    },
+    announce: function (message) {
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+        var str = "";
+        for (var i = 0; i < args.length; i++) {
+            if (args[i] != null) {
+                str = str + args[i];
+            }
+        }
+        var channel = message.guild.channels.get("name", "announcements");
+        channel.send(str);
     }
 }
