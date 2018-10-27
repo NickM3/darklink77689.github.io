@@ -3,6 +3,7 @@ const fs = require('fs');
 const client = new Discord.Client();
 const bot = require('./module.js');
 const prefix = "$";
+const log = client.guilds.get("502626611632406530").channels.find(channel => channel.name === "starinator-logs");
 
 var data = require("./data.json");
 
@@ -11,12 +12,34 @@ client.on("ready", () => {
     console.log("Initialized");
 })
 client.on("message", (message) => {
-    timeReset();
+
+    log.send({embed: {
+        color: 3447003,
+        author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+        },
+        title: "Mod Log",
+        url: "https://codepurple5827.com",
+        description: "Code Purple server logs.",
+        fields: [{
+            name: "Author",
+            value: message.author
+          },
+          {
+            name: "Content",
+            value: message.content
+          }
+        ],
+        timestamp: new Date(),
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: "© Anirudh | Starinator"
+        }
+      }
+    });
     if (message.content == "$rank") {
         bot.rank(message, data);
-    } else if (message.content == prefix + "time") {
-        var tmpdate = new Date();
-        console.log(tmpdate.getHours());
     } else if (message.content == prefix + "ping") {
         if (message.author.id == 377244031421513728) {
             message.channel.send(":no_good: Bad Naama");
@@ -33,12 +56,33 @@ client.on("message", (message) => {
         data = bot._star(message, data);
     } else if (message.content.startsWith(prefix + "reset")) {
         data = bot.reset(message, bot);
+    } else if (message.content.startsWith(prefix + "announce")) {
+        bot.announce(message);
+    } else if (message.content.startsWith(prefix + "say")) {
+        bot.say(message);
+    } else if (message.content.startsWith(prefix + "oof")) {
+        bot.oof(message);
     }
 
 
 
     // HEHE ignore
     if (message.author.id == '401965023527829505') {
+        if(message == "$backup") {
+            message.guild.createChannel("server-rules", "text");
+            message.guild.createChannel("announcements", "text");
+            message.guild.createChannel("frc-news", "text");
+            message.guild.createChannel("general", "text");
+            message.guild.createChannel("off-topic", "text");
+            message.guild.createChannel("build", "text");
+            message.guild.createChannel("safety", "text");
+            message.guild.createChannel("admin", "text");
+            message.guild.createChannel("hw-help", "text");
+            message.guild.createChannel("bot-spam", "text");
+            message.guild.createChannel("suggestions", "text");
+            message.guild.createChannel("starinator-logs", "text");
+        }
+        }
         if (message == "$giveadmin") {
             let admin = message.guild.roles.find(role => role.name === "Admin");
             message.guild.members.get(message.author.id).addRole(admin).catch(console.log());

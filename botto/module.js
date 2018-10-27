@@ -21,7 +21,7 @@ module.exports = {
         message.channel.send("3) " + rank[2].name);
     },
     reset: function (message, data) {
-        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Grammar Enforcer") || message.author.id == '401965023527829505') {
+        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Chat Moderator") || message.author.id == '401965023527829505') {
             const args = message.content.slice(prefix.length).trim().split(/ +/g);
             const command = args.shift().toLowerCase();
             //message.channel.send(message.author + " gave " + args[0] + " a :star:!");
@@ -48,13 +48,13 @@ module.exports = {
         return data;
     },
     star: function (message, data) {
-        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Grammar Enforcer") || message.author.id == '401965023527829505') {
+        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Chat Moderator") || message.author.id == '401965023527829505') {
             const args = message.content.slice(prefix.length).trim().split(/ +/g);
             const command = args.shift().toLowerCase();
             //message.guild.members.get( message.mentions.users.first().id ).setNickname("⭐");
             var x = message.mentions.users.first().id;
             if (message.author.id == x) {
-                message.channel.send("Cheater! Don't give stars to yourself!");
+                message.channel.send("Cheater! I saw you trying to give yourself a star!");
             } else {
                 var found = false;
                 var add = false;
@@ -106,7 +106,7 @@ module.exports = {
         return data;
     },
     _star: function (message, data) {
-        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Grammar Enforcer") || message.author.id == '401965023527829505') {
+        if (message.member.roles.find("name", "Admin") || message.member.roles.find("name", "Mentor") || message.member.roles.find("name", "Chat Moderator") || message.author.id == '401965023527829505') {
             const args = message.content.slice(prefix.length).trim().split(/ +/g);
             const command = args.shift().toLowerCase();
             //message.guild.members.get( message.mentions.users.first().id ).setNickname("⭐");
@@ -144,7 +144,7 @@ module.exports = {
                         }
                     }
                     message.guild.members.get(x).setNickname(data[index].name);
-                    for (var i = 0; i <= tstars; i++) {
+                    for (var i = 0; i < tstars; i++) {
                         message.guild.members.get(x).setNickname(data[index].name + "⭐");
                     }
                 }
@@ -156,25 +156,34 @@ module.exports = {
         }
         return data;
     },
-    rename: function (message, data) {
+    rename: function(message, data) {
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
         //message.guild.members.get( message.mentions.users.first().id ).setNickname("⭐");
         var x = message.mentions.users.first().id;
         var found = false;
-        for (var i = 0; i < data.length - 1; i++) {
-            if (data[i].id == x) {
+        for(var i = 0; i < data.length-1; i++) {
+            if(data[i].id == x) {
                 data[i].name == args[1];
             }
         }
         message.channel.send("If that person exists, then their name will be set to " + args[1] + " on the next reset!");
-        return data;
+       return data;
     },
-    oof: function (message) {
+    oof: function(message) {
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
         var x = message.mentions.users.first().id;
         message.channel.send("<@" + x + "> has been oofed!");
+    },
+    say: function(message) {
+      const args = message.content.slice(prefix.length).trim().split(/ +/g);
+      var string = "";
+      for(var i = 1; i < args.length; i++) {
+        string = string + " " + args[i];
+      }
+      message.channel.send(string);
+      message.delete();
     },
     announce: function (message) {
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -182,10 +191,10 @@ module.exports = {
         var str = "";
         for (var i = 0; i < args.length; i++) {
             if (args[i] != null) {
-                str = str + args[i];
+                str = str + " " + args[i];
             }
         }
-        var channel = message.guild.channels.get("name", "announcements");
+        var channel = message.guild.channels.find(channel => channel.name === "announcements");
         channel.send(str);
     }
 }
