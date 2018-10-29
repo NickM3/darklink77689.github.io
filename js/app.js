@@ -5,7 +5,7 @@ function closeWarning() {
     $('#warning').slideUp("slow", function () { });
 }
 
-var memCount = new CountUp("members", 0, 26, 0, 3);
+var memCount = new CountUp("members", 0, 33, 0, 3);
 var robotCount = new CountUp("robots", 0, 4, 0, 3);
 var yearCount = new CountUp("years", 0, 4, 0, 3);
 var winCount = new CountUp("wins", 0, 1, 0, 3);
