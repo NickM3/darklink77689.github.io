@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FRC Team 5827 Code Purple's Website">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Anirudh Suresh">
+    <title>Home | Code Purple</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/particles.css">
+</head>
+
+<!--comment test-->
+
+
+<body>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index">
+                <img src="img/logo.png">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index">
+                    Home
+                </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item" href="blog">
+                    <span class="icon">
+                        <i class="fa fa-newspaper"></i>
+                    </span>
+                    <span>
+                        Blog
+                    </span>
+                </a>
+                <a class="navbar-item" href="announcements">
+                    <span class="icon">
+                        <i class="fa fa-info"></i>
+                    </span>
+                    <span>
+                        Announcements
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-info is-fullheight vid-bg" style="background-color: #643a78;">
+        <div class="notification is-info" id="announcements" style="padding-top: 80px;">
+            <button class="delete" onclick="closeAnnouncements()"></button>
+            <h2 data-aos="fade-up">
+                <strong class="">Announcements</strong>
+            </h2>
+            <p data-aos="fade-up">Meetings in Room 332 every Thursday!</p>
+            <p data-aos="fade-up">Programming meeting on December 8th from 11am to 5pm! Contact meetings@codepurple5827.com or Mrs. Sirjani for more info</p>
+            <br>
+            <a class="button is-rounded is-dark hvr-grow" href="announcements" data-aos="fade-up">
+                <span class="icon">
+                    <i class="fa fa-link"></i>
+                </span>
+                <span>
+                    Other Info
+                </span>
+            </a>
+            <a class="button is-rounded is-danger is-outlined is-inverted hvr-grow" onclick="closeAnnouncements()"
+                data-aos="fade-up">
+                <span class="icon">
+                    <i class="fa fa-times"></i>
+                </span>
+                <span>
+                    Close
+                </span>
+            </a>
+        </div>
+        <div class="hero-body has-text-centered" id="particles-js">
+           <!-- <div class="container">
+                <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
+                    <span style='color:#FF6A4D;'>C</span><span style='color:#EC7456;'>o</span><span style='color:#D97E5F;'>d</span><span style='color:#C68868;'>e</span> <span style='color:#A09D7B;'>P</span><span style='color:#8EA784;'>u</span><span style='color:#7BB18D;'>r</span><span style='color:#68BC97;'>p</span><span style='color:#55C6A0;'>l</span><span style='color:#42D0A9;'>e</span>
+                </h1>
+                <br>
+                <p data-aos="fade-up">
+                    Team 5827
+                </p>
+                <p data-aos="fade-up">
+                    LWHS FRC Club
+                </p>
+            </div>-->
+        </div>
+
+        <div class="hero-foot nav-btn has-text-centered">
+            <a class="button is-dark is-rounded hvr-grow" href="#info">
+                <span class="icon">
+                    <i class="fa fa-chevron-down"></i>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <section class="hero is-primary is-large decriptionsection" id="info" style="background-image: url('img/banner_min.jpg');background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+        <div class="hero-body" style="background-color: rgba(0,0,0,0.75);">
+            <div class="container">
+                <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
+                    Kang
+                    <strong>Pride</strong>
+                </h1>
+
+                <p data-aos="fade-up"> We are Code Purple (Team 5827), an FRC robotics club from Lake Washington High
+                    School and local magnet academies,
+                    based in Kirkland, Washington. The club was started in 2011 as a VRC team. For three years,
+                    exceptional
+                    STEM students have gotten our robots to the Worlds competition and won numerous awards. For the
+                    2016
+                    season, the team decided to switch from the Vex to FRC for a greater challenge and more
+                    opportunities
+                    to enhance STEM principles. Throughout the school year, club members build a robot to compete in
+                    the
+                    current year’s FRC challenge. Every January, we build a new robot to go compete in that year's
+                    game.</p>
+
+                <br>
+                <p data-aos="fade-up">
+                    <a class="button is-info is-rounded hvr-grow" href="https://www.firstinspires.org/robotics/frc">
+                        <span class="icon">
+                            <i class="fa fa-link"></i>
+                        </span>
+                        <span>Learn More about FRC</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-success has-text-centered" style="background-color: #2e9e2e">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column hvr-grow" data-aos="fade-up">
+                        <span class="icon">
+                            <i class="fa fa-users fa-3x"></i>
+                        </span>
+                        <br>
+                        <span class="title" id="members">
+                            26
+                        </span>
+                        <br>
+                        <span class="subtitle" style="opacity: 0.7;">
+                            Members
+                        </span>
+                    </div>
+                    <div class="column hvr-grow" data-aos="fade-up">
+                        <span class="icon">
+                            <i class="fa fa-robot fa-3x"></i>
+                        </span>
+                        <br>
+                        <span class="title" id="robots">
+                            9999
+                        </span>
+                        <br>
+                        <span class="subtitle" style="opacity: 0.7;">
+                            Robots
+                        </span>
+                    </div>
+                    <div class="column hvr-grow" data-aos="fade-up">
+                        <span class="icon">
+                            <i class="fa fa-calendar fa-3x"></i>
+                        </span>
+                        <br>
+                        <span class="title" id="years">
+                            4
+                        </span>
+                        <br>
+                        <span class="subtitle" style="opacity: 0.7;">
+                            Years of Participation
+                        </span>
+                    </div>
+                    <div class="column hvr-grow" data-aos="fade-up">
+                        <span class="icon">
+                            <i class="fa fa-trophy fa-3x"></i>
+                        </span>
+                        <br>
+                        <span class="title" id="wins">
+                            1
+                        </span>
+                        <br>
+                        <span class="subtitle" style="opacity: 0.7;">
+                            Win
+                        </span>
+                    </div>
+                    <div class="column hvr-grow" data-aos="fade-up">
+                        <span class="icon">
+                            <i class="fa fa-handshake fa-3x"></i>
+                        </span>
+                        <br>
+                        <span class="title" id="sponsors">
+                            12
+                        </span>
+                        <br>
+                        <span class="subtitle" style="opacity: 0.7;">
+                            Sponsors
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="hero is-light is-fullheight" style="background-color: #EFF0EB;">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
+                    Recent Posts
+                </h1>
+                <br>
+                <div class="columns" data-aos="fade-up">
+                    <div class="column">
+                        <a href="blog.html#newwebsite">
+                            <div class="card hvr-grow">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="img/newwebsiteblogpostpic.PNG" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="img/invert.png" alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">New Website!</p>
+                                            <p class="subtitle is-6">Anirudh</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        New website... (Click to continue reading)
+                                        <br>
+                                        <time datetime="2016-1-1">9:00 PM - 17 Oct 2018</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <a class="hvr-grow button is-rounded is-info" data-aos="fade-up" href="blog">View More Blog Posts</a>
+    </section>
+
+    <!--<section class="hero is-light has-text-centered" id="pastbots">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" data-aos="fade-up">
+                    Past Bots
+                </h1>
+                <div class="columns" data-aos="fade-up">
+                    <div class="column is-one-third">
+                        <figure class="image is-128x128 hvr-grow" style="left:35%;" onclick="bot16()">
+                            <img src="img/2018bot.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="column is-one-third">
+                        <figure class="image is-128x128 hvr-grow" style="left:35%;" onclick="bot17()">
+                            <img src="img/2018bot.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="column is-one-third">
+                        <figure class="image is-128x128 hvr-grow" style="left:35%;" onclick="bot18()">
+                            <img src="img/2018bot.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                </div>
+                --<p data-aos="fade-up">Under development. Check back soon!</p>--
+            </div>
+            <div id="stronghold" class="accordion">
+                <br>
+                <h1 class="title">2016 Stronghold</h1>
+                <h2 class="subtitle">Sir Roo</h2>
+                <br>
+                <p>Our 2016 bot</p>
+            </div>
+            <div id="steamworks" class="accordion">
+                <br>
+                <h1 class="title">2017 Steamworks</h1>
+                <h2 class="subtitle">Sir Roo</h2>
+                <br>
+                <p>Our 2017 bot</p>
+            </div>
+            <div id="powerup" class="accordion">
+                <br>
+                <h1 class="title">2018 Power Up</h1>
+                <h2 class="subtitle">Roobert</h2>
+                <br>
+                <p>Our 2018 bot</p> 
+            </div>
+        </div>
+    </section>-->
+
+    <section class="hero is-info has-text-centered" id="contact">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Contact Us</h1>
+                <br>
+                <p>
+                    <a class="button is-info is-rounded is-inverted hvr-grow" href="mailto:support@codepurple5827.com">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span>
+                            Email
+                        </span>
+                    </a>
+                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://www.google.com/maps/place/Lake+Washington+High+School/@47.6730528,-122.1830947,17z/data=!3m1!4b1!4m5!3m4!1s0x549012b888153649:0x813d802da4492c9a!8m2!3d47.6730528!4d-122.180906">
+                        <span class="icon">
+                            <i class="fa fa-globe"></i>
+                        </span>
+                        <span>
+                            Location
+                        </span>
+                    </a>
+                </p>
+                <br>
+                <p>
+                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://www.instagram.com/lwhsrobotics/">
+                        <span class="icon hvr-grow">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </a>
+                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
+                        <span class="icon hvr-grow">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                    </a>
+                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://twitter.com/LW_Robotics">
+                        <span class="icon hvr-grow">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    </a>
+                </p>
+                <br>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero is-dark decriptionsection has-text-centered" id="footerbox">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Thank you sponsors!
+                </h1>
+                <br>
+                <div class="columns">
+                    <div class="column hvr-grow">
+                        <img src="img/msft.png">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/boeing.png" style="padding-top: 40px;">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/ospi.png">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/lw.gif">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/firstwa.jpg" style="width: 80%; height: 80%;">
+                    </div>
+                </div>
+                <br>
+                <div class="columns">
+                    <div class="column hvr-grow">
+                        <img src="img/f5logo.png">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/ftcredunionlogo.png">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/intelventures.png" style="padding-top: 20%;">
+                    </div>
+                    <div class="column hvr-grow">
+                        <img src="img/alaskaairlines.png" style="padding-top: 20%;">
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="hero-foot" id="foot" style="padding-bottom: 15px;">
+            <div class="hero has-text-centered is-dark">
+                <p>
+                    &copy;
+                    <strong>Code Purple</strong>
+                </p>
+                <p>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://www.instagram.com/lwhsrobotics/">
+                        <span class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
+                        <span class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://twitter.com/LW_Robotics">
+                        <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="mailto:support@codepurple5827.com">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://github.com/DarkLink77689/DarkLink77689.github.io">
+                        <span class="icon">
+                            <i class="fa fa-code"></i>
+                        </span>
+                    </a>
+                </p>
+                <br>
+                <br>
+                <p>
+                    <a href="https://github.com/DarkLink77689" style="font-size: 8px;" class="hvr-grow button is-dark is-outlined is-inverted is-rounded">Anirudh
+                        Suresh</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/particlessource.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script type="text/javascript" src="js/bulma-accordion.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/countup.js"></script>
+    <script src="js/visible.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
