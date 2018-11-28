@@ -6,6 +6,20 @@ html {
 .nav-btn {
     padding-bottom: 15px;
 }
+.is-purp {
+    background-color: #774065; 
+    color: white;
+    border: none;
+}
+.whit {
+    color: white;
+}
+.drk {
+    color: black;
+}
+.is-purp:hover {
+    color: white;
+}
 #foot {
     -webkit-transition: opacity 0.25s ease-in-out;
     -moz-transition: opacity 0.25s ease-in-out;
