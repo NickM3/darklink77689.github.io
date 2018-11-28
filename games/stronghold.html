@@ -8,8 +8,9 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Anirudh Suresh">
     <title>Stronghold | 2016 | Code Purple</title>
-    <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/2018LogoPurpleWordsPurple.png">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -31,7 +32,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="index">
+                <a class="navbar-item" href="../index">
                     Home
                 </a>
 
@@ -63,7 +64,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-item has-dropdown is-hoverable" style="padding-right:30px;">
                     <a class="navbar-link">
                         <span class="icon">
                             <i class="fa fa-info"></i>
@@ -87,7 +88,7 @@
                                 <i class="fa fa-info"></i>
                             </span>
                             <span>
-                                Announcements
+                                Info
                             </span>
                         </a>
                     </div>
@@ -95,37 +96,97 @@
             </div>
         </div>
     </nav>
-    <section class="hero is-dark is-large" id="top">
-        <div class="hero-body">
+    <section class="hero is-dark is-large decriptionsection" id="top" style="background-image: url('../img/strongholdbanner.png');background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+        <div class="hero-body" style="background-color: rgba(0,0,0,0.75);">
             <div class="container">
-                <p class="title">
+                <p class="title" style="font-size: 72px;">
                     Stronghold
                 </p>
                 <p class="subtitle">The 2016 FRC Game</p>
                 <br>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <div class="container">
+            <br>
+            <h1 class="title" style="font-size: 72px;" data-aos="fade-up">Game Overview</h1>
+            <blockquote class="notification" data-aos="fade-up">FIRST Stronghold was the 2016 FIRST Robotics
+                Competition game. The game was played by two alliances of up to three teams each, and involves
+                breaching the opponents’ defenses, known as outer work as well as capturing their tower by first firing
+                "boulders" (small foam balls) at it, and then surrounding or scaling the tower using a singular rung on
+                the tower wall. Points were scored by crossing elements of the tower's outer works, shooting boulders
+                into the opposing tower's five goals in order to lower the tower strength, and by surrounding and
+                scaling the tower. <a href="https://en.wikipedia.org/wiki/FIRST_Stronghold">Wikipedia</a></blockquote>
+            <br>
+            <br>
+            <h1 class="title" style="font-size: 72px;" data-aos="fade-up">Our Bot</h1>
+            <blockquote class="notification" data-aos="fade-up">Our bot was made with a 6x6 drive train with a very
+                short base to allow the passage under low ceilings and over rough terrain very quickly. The middle
+                section allowed for the intake of balls, and was shot with a pair of wheels pushing the ball along a
+                path.</blockquote>
+            <figure class="image" data-aos="fade-up">
+                <img src="../img/2016bot.jpg">
+            </figure>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="hero is-dark decriptionsection has-text-centered" id="footerbox">
+        <div class="hero-body" id="foot" style="padding-bottom: 15px;">
+            <div class="hero has-text-centered is-dark">
                 <p>
-                    <a class="button is-rounded">Info</a>
+                    &copy;
+                    <strong>Code Purple</strong>
+                </p>
+                <p>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://www.instagram.com/lwhsrobotics/">
+                        <span class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
+                        <span class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://twitter.com/LW_Robotics">
+                        <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="mailto:support@codepurple5827.com">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </a>
+                    <a class="button is-dark is-outlined is-inverted is-rounded hvr-grow" href="https://github.com/DarkLink77689/DarkLink77689.github.io">
+                        <span class="icon">
+                            <i class="fa fa-code"></i>
+                        </span>
+                    </a>
+                </p>
+                <br>
+                <br>
+                <p>
+                    <a href="https://github.com/DarkLink77689" style="font-size: 8px;" class="hvr-grow button is-dark is-outlined is-inverted is-rounded">Anirudh
+                        Suresh</a>
                 </p>
             </div>
         </div>
-
-        <!--<div class="hero-foot">
-            <nav class="tabs is-boxed is-fullwidth">
-                <div class="container">
-                    <ul>
-                        <li>
-                            <a href="#top">Main</a>
-                        </li>
-                        <li>
-                            <a href="#dates">Dates</a>
-                        </li>
-                        <li>
-                            <a href="#dates">Other Information</a>
-                        </li>
-                </div>
-            </nav>
-        </div>-->
     </section>
+
+    <script src="../js/particlessource.min.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script type="text/javascript" src="../js/bulma-accordion.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="../js/countup.js"></script>
+    <script src="../js/visible.min.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
