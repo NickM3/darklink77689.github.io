@@ -10,14 +10,40 @@
     <title>Home | Code Purple</title>
     <link rel="icon" href="img/2018LogoPurpleWordsPurple.png">
     <link rel="stylesheet" href="css/particles.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+
+
+    <section class="hero is-light is-fullheight vid-bg" style="background-color: #232741; z-index: 9999;">
+        <div class="hero-body has-text-centered" id="particles-js">
+            <!-- <div class="container">
+                <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
+                    <span style='color:#FF6A4D;'>C</span><span style='color:#EC7456;'>o</span><span style='color:#D97E5F;'>d</span><span style='color:#C68868;'>e</span> <span style='color:#A09D7B;'>P</span><span style='color:#8EA784;'>u</span><span style='color:#7BB18D;'>r</span><span style='color:#68BC97;'>p</span><span style='color:#55C6A0;'>l</span><span style='color:#42D0A9;'>e</span>
+                </h1>
+                <br>
+                <p data-aos="fade-up">
+                    Team 5827
+                </p>
+                <p data-aos="fade-up">
+                    LWHS FRC Club
+                </p>
+            </div>-->
+        </div>
+
+        <!--<div class="hero-foot nav-btn has-text-centered">
+            <a class="button is-purp is-rounded hvr-grow" href="#info">
+                <span class="icon">
+                    <i class="fa fa-chevron-down"></i>
+                </span>
+            </a>
+        </div>-->
+    </section>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation" style="position: -webkit-sticky;position: sticky;">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://codepurple5827.com">
                 <img src="img/2018LogoPurpleWordsPurple.png" width="">
@@ -83,7 +109,7 @@
                                 Blog
                             </span>
                         </a>
-                        <a class="navbar-item" href="https://codepurple5827.com/steamworks">
+                        <a class="navbar-item" href="https://codepurple5827.com/announcements">
                             <span class="icon">
                                 <i class="fa fa-info"></i>
                             </span>
@@ -96,10 +122,8 @@
             </div>
         </div>
     </nav>
-
-    <section class="hero is-info is-fullheight vid-bg" style="background-color: #643a78;">
-        <div class="notification is-info" id="announcements" style="padding-top: 80px;">
-            <button class="delete" onclick="closeAnnouncements()"></button>
+    <div class="is-light" id="announcements" style="background-color: #D0D1CD;">
+        <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
             <h2 data-aos="fade-up">
                 <strong class="">Announcements</strong>
             </h2>
@@ -107,7 +131,7 @@
             <p data-aos="fade-up">Programming meeting on December 8th from 11am to 5pm! Contact
                 meetings@codepurple5827.com or Mrs. Sirjani for more info</p>
             <br>
-            <a class="button is-rounded is-dark hvr-grow" href="announcements" data-aos="fade-up">
+            <a class="button is-rounded is-purp hvr-grow" href="announcements" data-aos="fade-up">
                 <span class="icon">
                     <i class="fa fa-link"></i>
                 </span>
@@ -115,47 +139,20 @@
                     Other Info
                 </span>
             </a>
-            <a class="button is-rounded is-danger is-outlined is-inverted hvr-grow" onclick="closeAnnouncements()"
-                data-aos="fade-up">
+            <a class="button is-rounded is-danger is-outlined" onclick="closeAnnouncements()" data-aos="fade-up">
                 <span class="icon">
                     <i class="fa fa-times"></i>
                 </span>
-                <span>
-                    Close
-                </span>
             </a>
         </div>
-        <div class="hero-body has-text-centered" id="particles-js">
-            <!-- <div class="container">
-                <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
-                    <span style='color:#FF6A4D;'>C</span><span style='color:#EC7456;'>o</span><span style='color:#D97E5F;'>d</span><span style='color:#C68868;'>e</span> <span style='color:#A09D7B;'>P</span><span style='color:#8EA784;'>u</span><span style='color:#7BB18D;'>r</span><span style='color:#68BC97;'>p</span><span style='color:#55C6A0;'>l</span><span style='color:#42D0A9;'>e</span>
-                </h1>
-                <br>
-                <p data-aos="fade-up">
-                    Team 5827
-                </p>
-                <p data-aos="fade-up">
-                    LWHS FRC Club
-                </p>
-            </div>-->
-        </div>
-
-        <div class="hero-foot nav-btn has-text-centered">
-            <a class="button is-dark is-rounded hvr-grow" href="#info">
-                <span class="icon">
-                    <i class="fa fa-chevron-down"></i>
-                </span>
-            </a>
-        </div>
-    </section>
-
+    </div>
     <section class="hero is-primary is-large decriptionsection" id="info" style="background-image: url('img/banner_min.jpg');background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
         <div class="hero-body" style="background-color: rgba(0,0,0,0.75);">
             <div class="container">
                 <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
-                    <span style='color:#6F3BFF;'>K</span><span style='color:#7D4EFF;'>a</span><span style='color:#8B62FF;'>n</span><span
-                        style='color:#9A75FF;'>g</span> <span style='color:#B79CFF;'>P</span><span style='color:#C5B0FF;'>r</span><span
-                        style='color:#D3C4FF;'>i</span><span style='color:#E2D7FF;'>d</span><span style='color:#F0EBFF;'>e</span>
+                    <span style='color:#7F5498;'>O</span><span style='color:#8F69A4;'>u</span><span style='color:#9F7EB1;'>r</span>
+                    <span style='color:#BFA9CB;'>C</span><span style='color:#CFBED8;'>l</span><span style='color:#DFD4E5;'>u</span><span
+                        style='color:#EFE9F2;'>b</span>
                 </h1>
 
                 <p data-aos="fade-up"> We are Code Purple (Team 5827), an FRC robotics club from Lake Washington High
@@ -173,7 +170,7 @@
 
                 <br>
                 <p data-aos="fade-up">
-                    <a class="button is-info is-rounded hvr-grow" href="https://www.firstinspires.org/robotics/frc">
+                    <a class="button is-purp is-rounded hvr-grow" href="https://www.firstinspires.org/robotics/frc">
                         <span class="icon">
                             <i class="fa fa-link"></i>
                         </span>
@@ -184,7 +181,7 @@
         </div>
     </section>
 
-    <section class="hero is-success has-text-centered" style="background-color: #2e9e2e">
+    <section class="hero is-purp has-text-centered">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
@@ -193,11 +190,11 @@
                             <i class="fa fa-users fa-3x"></i>
                         </span>
                         <br>
-                        <span class="title" id="members">
+                        <span class="title whit" id="members">
                             26
                         </span>
                         <br>
-                        <span class="subtitle" style="opacity: 0.7;">
+                        <span class="subtitle whit" style="opacity: 0.7;">
                             Members
                         </span>
                     </div>
@@ -206,11 +203,11 @@
                             <i class="fa fa-robot fa-3x"></i>
                         </span>
                         <br>
-                        <span class="title" id="robots">
+                        <span class="title whit" id="robots">
                             9999
                         </span>
                         <br>
-                        <span class="subtitle" style="opacity: 0.7;">
+                        <span class="subtitle whit" style="opacity: 0.7;">
                             Robots
                         </span>
                     </div>
@@ -219,11 +216,11 @@
                             <i class="fa fa-calendar fa-3x"></i>
                         </span>
                         <br>
-                        <span class="title" id="years">
+                        <span class="title whit" id="years">
                             4
                         </span>
                         <br>
-                        <span class="subtitle" style="opacity: 0.7;">
+                        <span class="subtitle whit" style="opacity: 0.7;">
                             Years of Participation
                         </span>
                     </div>
@@ -232,11 +229,11 @@
                             <i class="fa fa-trophy fa-3x"></i>
                         </span>
                         <br>
-                        <span class="title" id="wins">
+                        <span class="title whit" id="wins">
                             1
                         </span>
                         <br>
-                        <span class="subtitle" style="opacity: 0.7;">
+                        <span class="subtitle whit" style="opacity: 0.7;">
                             Win
                         </span>
                     </div>
@@ -245,11 +242,11 @@
                             <i class="fa fa-handshake fa-3x"></i>
                         </span>
                         <br>
-                        <span class="title" id="sponsors">
+                        <span class="title whit" id="sponsors">
                             12
                         </span>
                         <br>
-                        <span class="subtitle" style="opacity: 0.7;">
+                        <span class="subtitle whit" style="opacity: 0.7;">
                             Sponsors
                         </span>
                     </div>
@@ -259,7 +256,8 @@
         </div>
     </section>
 
-    <section class="hero is-light is-fullheight" style="background-color: #EFF0EB;">
+    <section class="hero is-light" style="background-color: #EFF0EB;">
+        <!--232741-->
         <div class="hero-body">
             <div class="container">
                 <h1 class="title" style="font-size: 72px;" data-aos="fade-up">
@@ -283,8 +281,8 @@
                                             </figure>
                                         </div>
                                         <div class="media-content">
-                                            <p class="title is-4">New Website!</p>
-                                            <p class="subtitle is-6">Anirudh</p>
+                                            <p class="title is-4 drk" style="color: black;">New Website!</p>
+                                            <p class="subtitle is-6 drk" style="color: black;">Anirudh</p>
                                         </div>
                                     </div>
 
@@ -299,34 +297,41 @@
                     </div>
                 </div>
                 <br>
-                <a class="hvr-grow button is-rounded is-info" data-aos="fade-up" href="blog">View More Blog Posts</a>
+                <p data-aos="fade-up">
+                    <a class="button is-rounded is-purp hvr-grow" href="blog">View More Blog Posts</a>
+                </p>
     </section>
 
-    <section class="hero is-light has-text-centered" id="pastbots">
+    <section class="hero is-light" id="pastbots" style="padding-top: 30px; padding-bottom: 30px;">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title" data-aos="fade-up">
+                <h1 class="title" data-aos="fade-up" style="font-size: 72px;">
                     Past Bots
                 </h1>
                 <div class="columns" data-aos="fade-up">
-                    <div class="column is-one-third">
-                        <figure class="image is-128x128 hvr-grow" style="left:35%;" onclick="bot16()">
+                    <div class="column">
+                        <figure class="image is-128x128 hvr-grow" style="" onclick="bot16()">
                             <img src="img/2016bot.jpg" alt="Placeholder image">
                         </figure>
                     </div>
-                    <div class="column is-one-third">
-                        <figure class="image is-128x128 hvr-grow" style="left:35%;" onclick="bot17()">
+                    <div class="column">
+                        <figure class="image is-128x128 hvr-grow" style="" onclick="bot17()">
                             <img src="img/2017bot.jpg" alt="Placeholder image">
                         </figure>
                     </div>
-                    <div class="column is-one-third">
-                        <figure class="image is-128x128 hvr-grow" style="left:35%;" onclick="bot18()">
+                    <div class="column">
+                        <figure class="image is-128x128 hvr-grow" style="" onclick="bot18()">
                             <img src="img/2018bot.jpg" alt="Placeholder image">
                         </figure>
                     </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
                 </div>
             </div>
-            <div id="stronghold" class="accordion">
+            <div id="stronghold" class="accordion has-text-centered">
                 <br>
                 <h1 class="title">2016 Stronghold</h1>
                 <h2 class="subtitle">Sir Roo</h2>
@@ -334,7 +339,7 @@
                 <p>Sir Roo was our bot for the 2016 season, Stronghold. Aimed to be able cross obstacles easily and
                     shoot balls, Sir Roo featured three wheels, low height, and a compact ball shooter</p>
                 <br>
-                <a class="button is-rounded is-info hvr-grow" href="games/stronghold.html">
+                <a class="button is-rounded is-purp hvr-grow" href="games/stronghold.html">
                     <span class="icon">
                         <i class="fa fa-info"></i>
                     </span>
@@ -343,7 +348,7 @@
                     </span>
                 </a>
             </div>
-            <div id="steamworks" class="accordion">
+            <div id="steamworks" class="accordion has-text-centered">
                 <br>
                 <h1 class="title">2017 Steamworks</h1>
                 <h2 class="subtitle">Sir Roo</h2>
@@ -351,7 +356,7 @@
                 <p>Our bot for 2017 season, Steamworks, and also named Sir Roo, featured innovative designs. A
                     lightweight frame and a strong climber allowed Sir Roo to be phenomenal at climbing</p>
                 <br>
-                <a class="button is-rounded is-info hvr-grow" href="">
+                <a class="button is-rounded is-purp hvr-grow" href="">
                     <span class="icon">
                         <i class="fa fa-info"></i>
                     </span>
@@ -360,7 +365,7 @@
                     </span>
                 </a>
             </div>
-            <div id="powerup" class="accordion">
+            <div id="powerup" class="accordion has-text-centered">
                 <br>
                 <h1 class="title">2018 Power Up</h1>
                 <h2 class="subtitle">Roobert</h2>
@@ -368,7 +373,7 @@
                 <p>Our bot for 2018 season, Power Up, was utothing but the industry standard. Featuring a versatile
                     design, Roobert was able to score at all possible locations</p>
                 <br>
-                <a class="button is-rounded is-info hvr-grow" href="">
+                <a class="button is-rounded is-purp hvr-grow" href="">
                     <span class="icon">
                         <i class="fa fa-info"></i>
                     </span>
@@ -380,13 +385,13 @@
         </div>
     </section>
 
-    <section class="hero is-info has-text-centered" id="contact">
+    <section class="hero is-purp has-text-centered" id="contact">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title">Contact Us</h1>
+                <h1 class="title" style="color: white;">Contact Us</h1>
                 <br>
                 <p>
-                    <a class="button is-info is-rounded is-inverted hvr-grow" href="mailto:support@codepurple5827.com">
+                    <a class="button is-light is-rounded hvr-grow" href="mailto:support@codepurple5827.com">
                         <span class="icon">
                             <i class="fa fa-envelope"></i>
                         </span>
@@ -394,7 +399,7 @@
                             Email
                         </span>
                     </a>
-                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://www.google.com/maps/place/Lake+Washington+High+School/@47.6730528,-122.1830947,17z/data=!3m1!4b1!4m5!3m4!1s0x549012b888153649:0x813d802da4492c9a!8m2!3d47.6730528!4d-122.180906">
+                    <a class="button is-light is-rounded hvr-grow" href="https://www.google.com/maps/place/Lake+Washington+High+School/@47.6730528,-122.1830947,17z/data=!3m1!4b1!4m5!3m4!1s0x549012b888153649:0x813d802da4492c9a!8m2!3d47.6730528!4d-122.180906">
                         <span class="icon">
                             <i class="fa fa-globe"></i>
                         </span>
@@ -405,18 +410,18 @@
                 </p>
                 <br>
                 <p>
-                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://www.instagram.com/lwhsrobotics/">
-                        <span class="icon hvr-grow">
+                    <a class="button is-light is-rounded hvr-grow" href="https://www.instagram.com/lwhsrobotics/">
+                        <span class="icon">
                             <i class="fab fa-instagram"></i>
                         </span>
                     </a>
-                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
-                        <span class="icon hvr-grow">
+                    <a class="button is-light is-rounded hvr-grow" href="https://www.facebook.com/Lake-Washington-Robotics-1644958515755629/">
+                        <span class="icon">
                             <i class="fab fa-facebook"></i>
                         </span>
                     </a>
-                    <a class="button is-info is-rounded is-inverted hvr-grow" href="https://twitter.com/LW_Robotics">
-                        <span class="icon hvr-grow">
+                    <a class="button is-light is-rounded hvr-grow" href="https://twitter.com/LW_Robotics">
+                        <span class="icon">
                             <i class="fab fa-twitter"></i>
                         </span>
                     </a>
@@ -523,10 +528,6 @@
                 </p>
                 <br>
                 <br>
-                <p>
-                    <a href="https://github.com/DarkLink77689" style="font-size: 8px;" class="hvr-grow button is-dark is-outlined is-inverted is-rounded">Anirudh
-                        Suresh</a>
-                </p>
             </div>
         </div>
     </section>
